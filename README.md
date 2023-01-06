@@ -8,7 +8,7 @@
 4- Não poder estilizar as tegas HTML, sendo orientada a utilização de classes<br>
 
 <br>
-[<img src="./tabela.png">]
+[<img src="src/Design/tabela.png">]
 <br>
 <br>
 
