@@ -1,0 +1,43 @@
+@import 'reset';
+@import 'variables';
+
+body {
+    // background-color: $champ-darker;
+    background-image: linear-gradient(to bottom right, $champ-darker, $champ-darker, $champ-darker, $champ-dark, $champ-darker, $champ-light);
+    background-size: cover;
+    min-height: 100vh;
+}
+
+h1 {
+    margin: 45px;
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+table {
+    color: #fff;
+    font-family: sans-serif;
+    border-collapse: collapse;
+    background-color: $champ-medium;
+    margin: 30px;
+    font-size: 1rem;
+
+    .champions {
+        background-color: $champ-dark;
+    }
+
+    th, td {
+        padding: 15px;
+    }
+
+    td {
+        border: solid 1px $champ-light;
+    }
+}
+
+/*
+
+.dados {
+    border: solid 2px;
+    padding: 10px;
+ }*/
