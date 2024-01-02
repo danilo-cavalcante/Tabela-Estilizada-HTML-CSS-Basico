@@ -2,7 +2,6 @@
 @import 'variables';
 
 body {
-    // background-color: $champ-darker;
     background-image: linear-gradient(to bottom right, $champ-darker, $champ-darker, $champ-darker, $champ-dark, $champ-darker, $champ-light);
     background-size: cover;
     min-height: 100vh;
@@ -34,10 +33,3 @@ table {
         border: solid 1px $champ-light;
     }
 }
-
-/*
-
-.dados {
-    border: solid 2px;
-    padding: 10px;
- }*/
