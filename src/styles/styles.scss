@@ -25,11 +25,42 @@ table {
         background-color: $champ-dark;
     }
 
-    th, td {
+    th,
+    td {
         padding: 15px;
     }
 
     td {
         border: solid 1px $champ-light;
+        text-align: center;
+    }
+
+    td:first-child {
+        font-weight: 700;
+        text-align: start;
+    }
+
+    td:nth-child(2) {
+        font-weight: 900;
+    }
+
+    tr:first-child,
+    tr:nth-child(2) {
+        td:first-child {
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                z-index: 999;
+                width: 10px;
+                height: 100%;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: rgba(25, 144, 25, 0.6);
+            }
+        }
     }
 }
