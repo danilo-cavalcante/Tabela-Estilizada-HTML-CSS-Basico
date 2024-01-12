@@ -8,4 +8,4 @@ Este repositório foi criado para um exercício simples de uma tabela
 ## Tecnologias utilizadas:
 - HTML
 - Sass
-- CSS
+- JavaScript
