@@ -13,6 +13,25 @@ h1 {
     font-size: 2.5rem;
 }
 
+h2 {
+    margin: 40px;
+    color: #fff;
+    font-size: 2rem;
+}
+
+p {
+    margin:  10px;
+
+    &.ano {
+        padding: 10px;
+        background-color: $champ-light;
+        display: inline-block;
+        font-size: 1.8rem;
+        border-radius: 5px;
+        color: $champ-dark;
+    }
+}
+
 table {
     color: #fff;
     font-family: sans-serif;
