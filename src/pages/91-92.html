@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/css/estilo.css">
+    <title>Tabela da UEFA Champios League 1991/92</title>
+</head>
+<body>
+    <h1>UEFA Champions League 1991/92</h1>
+
+    <table id="tabela"></table>
+
+    <script src="../scripts/old.js"></script>
+
+    <script>
+        const jogosGrupoA = [
+            { time1: 'Anderlech', gols1: 0, time2: 'Panathinaikos', gols2: 0 },
+            { time1: 'Sampdoria', gols1: 2, time2: 'Crvena zvezda', gols2: 0 },
+
+            { time1: 'Panathinaikos', gols1: 0, time2: 'Sampdoria', gols2: 0 },
+            { time1: 'Crvena zvezda', gols1: 3, time2: 'Anderlech', gols2: 2 },
+
+            { time1: 'Panathinaikos', gols1: 0, time2: 'Crvena zvezda', gols2: 2 },
+            { time1: 'Anderlech', gols1: 3, time2: 'Sampdoria', gols2: 2 },
+
+            { time1: 'Crvena zvezda', gols1: 1, time2: 'Panathinaikos', gols2: 0 },
+            { time1: 'Sampdoria', gols1: 2, time2: 'Anderlech', gols2: 0 },
+
+            { time1: 'Panathinaikos', gols1: 0, time2: 'Anderlech', gols2: 0 },
+            { time1: 'Crvena zvezda', gols1: 1, time2: 'Sampdoria', gols2: 3 },
+
+            { time1: 'Anderlech', gols1: 3, time2: 'Crvena zvezda', gols2: 2 },
+            { time1: 'Sampdoria', gols1: 1, time2: 'Panathinaikos', gols2: 1 },
+        ];
+
+
+
+        const tabelaGrupoA = calcularTabela(jogosGrupoA);
+        exibirTabela(tabelaGrupoA);
+
+        grupo = 'B';
+
+        const jogosGrupoB = [
+            { time1: 'Atlético de Madrid', gols1: 4, time2: 'FCSB', gols2: 0 },
+            { time1: 'Dortmund', gols1: 2, time2: 'Widzew', gols2: 1 },
+            { time1: 'FCSB', gols1: 0, time2: 'Dortmund', gols2: 3 },
+            { time1: 'Widzew', gols1: 1, time2: 'Atlético de Madrid', gols2: 4 },
+            { time1: 'FCSB', gols1: 1, time2: 'Widzew', gols2: 0 },
+            { time1: 'Atlético de Madrid', gols1: 0, time2: 'Dortmund', gols2: 1 },
+            { time1: 'Widzew', gols1: 2, time2: 'FCSB', gols2: 0 },
+            { time1: 'Dortmund', gols1: 1, time2: 'Atlético de Madrid', gols2: 2 },
+            { time1: 'FCSB', gols1: 1, time2: 'Atlético de Madrid', gols2: 1 },
+            { time1: 'Widzew', gols1: 2, time2: 'Dortmund', gols2: 2 },
+            { time1: 'Atlético de Madrid', gols1: 1, time2: 'Widzew', gols2: 0 },
+            { time1: 'Dortmund', gols1: 5, time2: 'FCSB', gols2: 3 },
+        ];
+
+        const tabelaGrupoB = calcularTabela(jogosGrupoB);
+        exibirTabela(tabelaGrupoB);
+
+    </script>
+</body>
+</html>
