@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/css/estilo.css">
+    <title>Tabela da UEFA Champios League 1991/92</title>
+</head>
+
+<body>
+    <h1>UEFA Champions League 1992/93</h1>
+
+    <table id="tabela"></table>
+
+    <script src="../scripts/old-score.js"></script>
+
+    <script>
+        const jogosGrupoA = [
+            { time1: 'Monaco', gols1: 4, time2: 'Spartak Moskva', gols2: 1 },
+            { time1: 'Galatasaray', gols1: 0, time2: 'Barcelona', gols2: 0 },
+
+            { time1: 'Spartak Moskva', gols1: 0, time2: 'Galatasaray', gols2: 0 },
+            { time1: 'Barcelona', gols1: 2, time2: 'Monaco', gols2: 0 },
+
+            { time1: 'Spartak Moskva', gols1: 2, time2: 'Barcelona', gols2: 2 },
+            { time1: 'Monaco', gols1: 3, time2: 'Galatasaray', gols2: 0 },
+
+            { time1: 'Barcelona', gols1: 5, time2: 'Spartak Moskva', gols2: 1 },
+            { time1: 'Galatasaray', gols1: 0, time2: 'Monaco', gols2: 2 },
+
+            { time1: 'Spartak Moskva', gols1: 0, time2: 'Monaco', gols2: 0 },
+            { time1: 'Barcelona', gols1: 3, time2: 'Galatasaray', gols2: 0 },
+
+            { time1: 'Monaco', gols1: 0, time2: 'Barcelona', gols2: 1 },
+            { time1: 'Galatasaray', gols1: 1, time2: 'Spartak Moskva', gols2: 2 },
+        ];
+
+
+
+        const tabelaGrupoA = calcularTabela(jogosGrupoA);
+        exibirTabela(tabelaGrupoA);
+
+        grupo = 'B';
+
+        const jogosGrupoB = [
+            { time1: 'Anderlecht', gols1: 0, time2: 'Milan', gols2: 0 },
+            { time1: 'FC Porto', gols1: 3, time2: 'Bremen', gols2: 2 },
+
+            { time1: 'Milan', gols1: 3, time2: 'FC Porto', gols2: 0 },
+            { time1: 'Bremen', gols1: 5, time2: 'Anderlecht', gols2: 3 },
+
+            { time1: 'Milan', gols1: 2, time2: 'Bremen', gols2: 1 },
+            { time1: 'Anderlecht', gols1: 1, time2: 'FC Porto', gols2: 0 },
+
+            { time1: 'Bremen', gols1: 1, time2: 'Milan', gols2: 1 },
+            { time1: 'FC Porto', gols1: 2, time2: 'Anderlecht', gols2: 0 },
+
+            { time1: 'Milan', gols1: 0, time2: 'Anderlecht', gols2: 0 },
+            { time1: 'Bremen', gols1: 0, time2: 'FC Porto', gols2: 5 },
+
+            { time1: 'Anderlecht', gols1: 1, time2: 'Bremen', gols2: 2 },
+            { time1: 'FC Porto', gols1: 0, time2: 'Milan', gols2: 0 },
+        ];
+
+        const tabelaGrupoB = calcularTabela(jogosGrupoB);
+        exibirTabela(tabelaGrupoB);
+
+    </script>
+</body>
+
+</html>
+
+<!--
+            { time1: '', gols1: , time2: '', gols2:  },
+            { time1: '', gols1: , time2: '', gols2:  },
+
+            { time1: '', gols1: , time2: '', gols2:  },
+            { time1: '', gols1: , time2: '', gols2:  },
+
+            { time1: '', gols1: , time2: '', gols2:  },
+            { time1: '', gols1: , time2: '', gols2:  },
+
+            { time1: '', gols1: , time2: '', gols2:  },
+            { time1: '', gols1: , time2: '', gols2:  },
+
+            { time1: '', gols1: , time2: '', gols2:  },
+            { time1: '', gols1: , time2: '', gols2:  },
+
+            { time1: '', gols1: , time2: '', gols2:  },
+            { time1: '', gols1: , time2: '', gols2:  },
+-->
