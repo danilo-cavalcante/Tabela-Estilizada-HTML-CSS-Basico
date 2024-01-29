@@ -48,6 +48,9 @@ function exibirTabela(tabela) {
         else if (tabela[b].pontos === tabela[a].pontos) {
             return tabela[b].saldoGols - tabela[a].saldoGols
         }
+        else if (tabela[b].pontos === tabela[a].pontos && tabela[b].saldoGols === tabela[a].saldoGols) {
+            return tabela[b].golsMarcados - tabela[a].golsMarcados
+        }
     });
 
     const tableBody = document.getElementById('tabela')
