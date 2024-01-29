@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/css/estilo.css">
+    <title>Tabela da UEFA Champios League 1991/92</title>
+</head>
+
+<body>
+    <h1>UEFA Champions League 1994/95</h1>
+
+    <table id="tabela"></table>
+
+    <script src="../scripts/old-score.js"></script>
+
+    <script>
+        const jogosGrupoA = [
+            { time1: 'Barcelona', gols1: 2, time2: 'Galatasaray', gols2: 1 },
+            { time1: 'Man United', gols1: 4, time2: 'Göteborg', gols2: 2 },
+
+            { time1: 'Galatasaray', gols1: 0, time2: 'Man United', gols2: 0 },
+            { time1: 'Göteborg', gols1: 2, time2: 'Barcelona', gols2: 1 },
+
+            { time1: 'Göteborg', gols1: 1, time2: 'Galatasaray', gols2: 0 },
+            { time1: 'Man United', gols1: 2, time2: 'Barcelona', gols2: 2 },
+
+            { time1: 'Galatasaray', gols1: 0, time2: 'Göteborg', gols2: 1 },
+            { time1: 'Barcelona', gols1: 4, time2: 'Man United', gols2: 0 },
+
+            { time1: 'Galatasaray', gols1: 2, time2: 'Barcelona', gols2: 1 },
+            { time1: 'Göteborg', gols1: 3, time2: 'Man United', gols2: 1 },
+
+            { time1: 'Barcelona', gols1: 1, time2: 'Göteborg', gols2: 1 },
+            { time1: 'Man United', gols1: 4, time2: 'Galatasaray', gols2: 0 },
+        ];
+
+
+
+        const tabelaGrupoA = calcularTabela(jogosGrupoA);
+        exibirTabela(tabelaGrupoA);
+
+        grupo = 'B';
+
+        const jogosGrupoB = [
+            { time1: 'Dynamo Kyiv', gols1: 3, time2: 'Spartk Moskva', gols2: 2 },
+            { time1: 'Paris Saint Germain', gols1: 2, time2: 'Bayen Münichen', gols2: 0 },
+
+            { time1: 'Spartk Moskva', gols1: 1, time2: 'Paris Saint Germain', gols2: 2 },
+            { time1: 'Bayen Münichen', gols1: 1, time2: 'Dynamo Kyiv', gols2: 0 },
+
+            { time1: 'Spartk Moskva', gols1: 1, time2: 'Bayen Münichen', gols2: 1 },
+            { time1: 'Dynamo Kyiv', gols1: 1, time2: 'Paris Saint Germain', gols2: 2 },
+
+            { time1: 'Bayen Münichen', gols1: 2, time2: 'Spartk Moskva', gols2: 2 },
+            { time1: 'Paris Saint Germain', gols1: 1, time2: 'Dynamo Kyiv', gols2: 0 },
+
+            { time1: 'Spartk Moskva', gols1: 1, time2: 'Dynamo Kyiv', gols2: 0 },
+            { time1: 'Bayen Münichen', gols1: 0, time2: 'Paris Saint Germain', gols2: 1 },
+
+            { time1: 'Dynamo Kyiv', gols1: 1, time2: 'Bayen Münichen', gols2: 4 },
+            { time1: 'Paris Saint Germain', gols1: 4, time2: 'Spartk Moskva', gols2: 1 },
+        ];
+
+        const tabelaGrupoB = calcularTabela(jogosGrupoB);
+        exibirTabela(tabelaGrupoB);
+
+        grupo = 'C';
+
+        const jogosGrupoC = [
+            { time1: 'Hajduk Split', gols1: 0, time2: 'Benfica', gols2: 0 },
+            { time1: 'Anderlecht', gols1: 0, time2: 'FCSB', gols2: 0 },
+
+            { time1: 'FCSB', gols1: 0, time2: 'Hajduk Split', gols2: 1 },
+            { time1: 'Benfica', gols1: 3, time2: 'Anderlecht', gols2: 1 },
+
+            { time1: 'Hajduk Split', gols1: 2, time2: 'Anderlecht', gols2: 1 },
+            { time1: 'Benfica', gols1: 2, time2: 'FCSB', gols2: 1 },
+
+            { time1: 'FCSB', gols1: 1, time2: 'Benfica', gols2: 1 },
+            { time1: 'Anderlecht', gols1: 0, time2: 'Hajduk Split', gols2: 0 },
+
+            { time1: 'FCSB', gols1: 1, time2: 'Anderlecht', gols2: 1 },
+            { time1: 'Benfica', gols1: 2, time2: 'Hajduk Split', gols2: 1 },
+
+            { time1: 'Hajduk Split', gols1: 1, time2: 'FCSB', gols2: 4 },
+            { time1: 'Anderlecht', gols1: 1, time2: 'Benfica', gols2: 1 },
+        ];
+
+        const tabelaGrupoC = calcularTabela(jogosGrupoC);
+        exibirTabela(tabelaGrupoC);
+
+        grupo = 'D';
+
+        const jogosGrupoD = [
+            { time1: 'Salzburg', gols1: 0, time2: 'AEK Athens', gols2: 0 },
+            { time1: 'Ajax', gols1: 2, time2: 'Milan', gols2: 0 },
+
+            { time1: 'Milan', gols1: 3, time2: 'Salzburg', gols2: 0 },
+            { time1: 'AEK Athens', gols1: 1, time2: 'Ajax', gols2: 2 },
+
+            { time1: 'AEK Athens', gols1: 0, time2: 'Milan', gols2: 0 },
+            { time1: 'Salzburg', gols1: 0, time2: 'Ajax', gols2: 0 },
+
+            { time1: 'Milan', gols1: 2, time2: 'AEK Athens', gols2: 1 },
+            { time1: 'Ajax', gols1: 1, time2: 'Salzburg', gols2: 1 },
+
+            { time1: 'AEK Athens', gols1: 1, time2: 'Salzburg', gols2: 3 },
+            { time1: 'Milan', gols1: 0, time2: 'Ajax', gols2: 2 },
+
+            { time1: 'Salzburg', gols1: 0, time2: 'Milan', gols2: 1 },
+            { time1: 'Ajax', gols1: 2, time2: 'AEK Athens', gols2: 0 },
+        ];
+
+        const tabelaGrupoD = calcularTabela(jogosGrupoD);
+        exibirTabela(tabelaGrupoD);
+
+    </script>
+</body>
+
+</html>
