@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/css/estilo.css">
+    <title>Tabela da UEFA Champios League 1996/97</title>
+</head>
+
+<body>
+    <h1>UEFA Champions League 1996/97</h1>
+
+    <table id="tabela"></table>
+
+
+    <script src="../scripts/score.js"></script>
+
+    <script>
+        const jogosGrupoA = [
+            { time1: 'Nantes', gols1: 0, time2: 'FC Porto', gols2: 0 },
+            { time1: 'Parathinaikos', gols1: 3, time2: 'Nantes', gols2: 1 },
+            { time1: 'FC Porto', gols1: 2, time2: 'AaB', gols2: 0 },
+
+            { time1: 'Nantes', gols1: 3, time2: 'AaB', gols2: 1 },
+            { time1: 'FC Porto', gols1: 0, time2: 'Parathinaikos', gols2: 1 },
+            
+            { time1: 'AaB', gols1: 2, time2: 'Parathinaikos', gols2: 1 },
+
+            { time1: 'Parathinaikos', gols1: 0, time2: 'FC Porto', gols2: 0 },
+            { time1: 'AaB', gols1: 0, time2: 'Nantes', gols2: 2 },
+
+            { time1: 'Parathinaikos', gols1: 2, time2: 'AaB', gols2: 0 },
+            { time1: 'FC Porto', gols1: 2, time2: 'Nantes', gols2: 2 },
+
+            { time1: 'Nantes', gols1: 0, time2: 'Parathinaikos', gols2: 0 },
+            { time1: 'AaB', gols1: 2, time2: 'FC Porto', gols2: 2 },
+        ];
+
+
+
+        const tabelaGrupoA = calcularTabela(jogosGrupoA);
+        exibirTabela(tabelaGrupoA);
+
+        grupo = 'B';
+
+        const jogosGrupoB = [
+            { time1: 'Legia', gols1: 3, time2: 'Rosenborg', gols2: 1 },
+            { time1: 'Blackburn', gols1: 0, time2: 'Spartak Moskva', gols2: 1 },
+
+            { time1: 'Spartak Moskva', gols1: 2, time2: 'Legia', gols2: 1 },
+            { time1: 'Rosenborg', gols1: 2, time2: 'Blackburn', gols2: 1 },
+
+            { time1: 'Legia', gols1: 1, time2: 'Blackburn', gols2: 0 },
+            { time1: 'Rosenborg', gols1: 2, time2: 'Spartak Moskva', gols2: 4 },
+
+            { time1: 'Spartak Moskva', gols1: 4, time2: 'Rosenborg', gols2: 1 },
+            { time1: 'Blackburn', gols1: 0, time2: 'Legia', gols2: 0 },
+
+            { time1: 'Spartak Moskva', gols1: 3, time2: 'Blackburn', gols2: 0 },
+            { time1: 'Rosenborg', gols1: 4, time2: 'Legia', gols2: 0 },
+
+            { time1: 'Legia', gols1: 0, time2: 'Spartak Moskva', gols2: 1 },
+            { time1: 'Blackburn', gols1: 4, time2: 'Rosenborg', gols2: 1 },
+        ];
+
+        const tabelaGrupoB = calcularTabela(jogosGrupoB);
+        exibirTabela(tabelaGrupoB);
+
+        grupo = 'C'
+
+        const jogosGrupoC = [
+            { time1: 'FCSB', gols1: 1, time2: 'Rangers', gols2: 0 },
+            { time1: 'Dortmund', gols1: 1, time2: 'Juventus', gols2: 3 },
+
+            { time1: 'Juventus', gols1: 3, time2: 'FCSB', gols2: 0 },
+            { time1: 'Rangers', gols1: 2, time2: 'Dortmund', gols2: 2 },
+
+            { time1: 'Dortmund', gols1: 1, time2: 'FCSB', gols2: 0 },
+            { time1: 'Juventus', gols1: 4, time2: 'Rangers', gols2: 1 },
+
+            { time1: 'FCSB', gols1: 0, time2: 'Dortmund', gols2: 0 },
+            { time1: 'Rangers', gols1: 0, time2: 'Juventus', gols2: 4 },
+
+            { time1: 'Juventus', gols1: 1, time2: 'Dortmund', gols2: 2 },
+            { time1: 'Rangers', gols1: 1, time2: 'FCSB', gols2: 1 },
+
+            { time1: 'FCSB', gols1: 0, time2: 'Juventus', gols2: 0 },
+            { time1: 'Dortmund', gols1: 2, time2: 'Rangers', gols2: 2 },
+        ];
+
+        const tabelaGrupoC = calcularTabela(jogosGrupoC);
+        exibirTabela(tabelaGrupoC);
+
+        grupo = 'D'
+
+        const jogosGrupoD = [
+            { time1: 'AJax', gols1: 1, time2: 'Real Madrid', gols2: 0 },
+            { time1: 'Grasshoppers', gols1: 0, time2: 'Ferencváros', gols2: 3 },
+
+            { time1: 'Ferencváros', gols1: 1, time2: 'AJax', gols2: 5 },
+            { time1: 'Real Madrid', gols1: 2, time2: 'Grasshoppers', gols2: 0 },
+
+            { time1: 'AJax', gols1: 3, time2: 'Grasshoppers', gols2: 0 },
+            { time1: 'Real Madrid', gols1: 6, time2: 'Ferencváros', gols2: 1 },
+
+            { time1: 'Ferencváros', gols1: 1, time2: 'Real Madrid', gols2: 1 },
+            { time1: 'Grasshoppers', gols1: 0, time2: 'AJax', gols2: 0 },
+
+            { time1: 'Ferencváros', gols1: 3, time2: 'Grasshoppers', gols2: 3 },
+            { time1: 'Real Madrid', gols1: 0, time2: 'AJax', gols2: 2 },
+
+            { time1: 'AJax', gols1: 4, time2: 'Ferencváros', gols2: 0 },
+            { time1: 'Grasshoppers', gols1: 0, time2: 'Real Madrid', gols2: 2 },
+        ]
+
+        const tabelaGrupoD = calcularTabela(jogosGrupoD);
+        exibirTabela(tabelaGrupoD);
+    </script>
+</body>
+
+</html>
