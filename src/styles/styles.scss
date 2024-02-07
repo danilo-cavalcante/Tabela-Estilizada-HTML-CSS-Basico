@@ -20,7 +20,7 @@ h2 {
 }
 
 p {
-    margin:  10px;
+    margin: 10px;
 
     &.ano {
         padding: 10px;
@@ -85,4 +85,29 @@ table {
     //         }
     //     }
     // }
+}
+
+.logo-name {
+    h1 {
+        font-family: 'EB Garamond', serif;
+        font-weight: 900;
+        font-size: 1.5rem;
+        margin: $small-mrg;
+    }
+
+    h2 {
+        font-family: 'Lato', sans-serif;
+        border-top: 2px solid #eee;
+        border-bottom: 2px solid #eee;
+        font-size: 1.5rem;
+        margin: $small-mrg;
+    }
+}
+
+.top {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #121266;
+    color: #eee;
 }
